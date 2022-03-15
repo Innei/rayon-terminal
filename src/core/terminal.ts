@@ -1,8 +1,10 @@
 import { Terminal } from 'xterm'
 import { FitAddon } from 'xterm-addon-fit'
 import { SearchAddon } from 'xterm-addon-search'
+import { ITheme } from '../types/theme'
 import { base64ToUint8Array } from '../utils'
 import { changeDarkTheme } from './chanage-theme'
+import { getTheme, storageTheme } from './storage'
 import { registerOnWindow } from './webkit-window'
 
 export const fitAddon = new FitAddon()
@@ -12,12 +14,16 @@ Terminal.prototype.writeBase64 = function (this: Terminal, base64: string) {
   this.write(base64ToUint8Array(base64))
 }
 
+const storagesTheme = getTheme()
+
 export const terminal = new Terminal({
   allowTransparency: true,
   theme: {
     background: 'transparent',
   },
   rendererType: 'dom',
+  fontFamily: storagesTheme?.fontFamily || 'monospace',
+  fontSize: storagesTheme?.fontSize || 16,
 })
 
 terminal.loadAddon(fitAddon)
@@ -50,3 +56,31 @@ window
   })
 
 registerOnWindow()
+
+let memoStyles: HTMLStyleElement | null = null
+
+window.setTheme = (theme: ITheme) => {
+  const styles = document.createElement('style')
+
+  const { fontFamily, fontSize, ...rest } = theme
+  styles.innerHTML = `
+  .xterm-rows {
+    
+  }`
+
+  if (fontFamily) {
+    terminal.options.fontFamily = fontFamily
+  }
+  if (fontSize) {
+    terminal.options.fontSize = fontSize
+  }
+
+  document.head.appendChild(styles)
+
+  if (memoStyles) {
+    memoStyles.remove()
+  }
+  memoStyles = styles
+
+  storageTheme(theme)
+}
