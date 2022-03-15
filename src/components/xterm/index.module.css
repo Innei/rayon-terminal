@@ -1,0 +1,33 @@
+.xterm {
+  position: relative;
+  user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+}
+
+.search-bar-wrapper {
+  @apply hidden transition-all shadow-sm shadow-light-300 dark:shadow-dark-600;
+}
+
+.search-bar-wrapper.focus {
+  @apply shadow-xl shadow-light-600 dark:shadow-dark-300;
+}
+
+.search-bar-wrapper:global(.active) {
+  display: flex;
+}
+
+.bar {
+  @apply bg-gray-200 dark:bg-gray-600 rounded-lg;
+  @apply text-dark-800 dark:text-light-300;
+  @apply px-2 py-1 shadow-light-400 dark:shadow-dark-200 transition-all;
+  @apply outline-none;
+}
+
+.icon {
+  @apply transition-all rounded-sm;
+}
+
+.icon.enable {
+  @apply bg-light-600 dark:bg-dark-300;
+}

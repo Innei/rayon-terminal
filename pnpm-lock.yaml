@@ -1,26 +1,44 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@iconify-json/mdi': 1.1.1
   '@innei-util/eslint-config-react-ts': 0.2.0
   '@innei-util/eslint-config-ts': 0.4.0
   '@innei-util/prettier': 0.2.2
+  '@types/lodash-es': 4.17.6
+  '@unocss/preset-icons': 0.28.1
   '@unocss/preset-wind': 0.28.1
+  '@unocss/reset': 0.28.1
   '@unocss/transformer-directives': 0.28.1
   autoprefixer: ^10.4.2
+  lodash-es: 4.17.21
   postcss: ^8.4.8
   solid-js: ^1.3.12
   typescript: ^4.6.2
   unocss: 0.28.1
   vite: ^2.8.6
   vite-plugin-solid: ^2.2.6
+  xterm: 4.18.0
+  xterm-addon-fit: 0.5.0
+  xterm-addon-search: 0.8.2
+  xterm-theme: 1.1.0
 
 dependencies:
+  '@types/lodash-es': 4.17.6
+  '@unocss/reset': 0.28.1
+  lodash-es: 4.17.21
   solid-js: 1.3.12
+  xterm: 4.18.0
+  xterm-addon-fit: 0.5.0_xterm@4.18.0
+  xterm-addon-search: 0.8.2_xterm@4.18.0
+  xterm-theme: 1.1.0
 
 devDependencies:
+  '@iconify-json/mdi': 1.1.1
   '@innei-util/eslint-config-react-ts': 0.2.0_typescript@4.6.2
   '@innei-util/eslint-config-ts': 0.4.0_typescript@4.6.2
   '@innei-util/prettier': 0.2.2_typescript@4.6.2
+  '@unocss/preset-icons': 0.28.1
   '@unocss/preset-wind': 0.28.1
   '@unocss/transformer-directives': 0.28.1
   autoprefixer: 10.4.2_postcss@8.4.8
@@ -470,6 +488,12 @@ packages:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
     dev: true
 
+  /@iconify-json/mdi/1.1.1:
+    resolution: {integrity: sha512-DkkvAA4sI5SyzqOZo/R4eQc4srBcNREBGnQNdj2/cJ39RiTVp9nKZu6z1gjUC4SlwmUJA5SIQwmx9lSxBVrK2Q==}
+    dependencies:
+      '@iconify/types': 1.0.12
+    dev: true
+
   /@iconify/types/1.0.12:
     resolution: {integrity: sha512-6er6wSGF3hgc1JEZqiGpg21CTCjHBYOUwqLmb2Idzkjiw6ogalGP0ZMLVutCzah+0WB4yP+Zd2oVPN8jvJ+Ftg==}
     dev: true
@@ -610,6 +634,16 @@ packages:
   /@types/json5/0.0.29:
     resolution: {integrity: sha1-7ihweulOEdK4J7y+UnC86n8+ce4=}
     dev: true
+
+  /@types/lodash-es/4.17.6:
+    resolution: {integrity: sha512-R+zTeVUKDdfoRxpAryaQNRKk3105Rrgx2CFRClIgRGaqDTdjsm8h6IYA8ir584W3ePzkZfst5xIgDwYrlh9HLg==}
+    dependencies:
+      '@types/lodash': 4.14.180
+    dev: false
+
+  /@types/lodash/4.14.180:
+    resolution: {integrity: sha512-XOKXa1KIxtNXgASAnwj7cnttJxS4fksBRywK/9LzRV5YxrF80BXZIGeQSuoESQ/VkUj30Ae0+YcuHc15wJCB2g==}
+    dev: false
 
   /@types/parse-json/4.0.0:
     resolution: {integrity: sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==}
@@ -892,7 +926,6 @@ packages:
 
   /@unocss/reset/0.28.1:
     resolution: {integrity: sha512-BB6CE76fhaIW/jC+KzAKDrd/i6Lxc101ZQgUKD8hYZzdmwnInFoDdhhC4ey0soiSjLlUVIjsWWxywdsBMATDdQ==}
-    dev: true
 
   /@unocss/scope/0.28.1:
     resolution: {integrity: sha512-iGGW88gTX17PAhD0cT4gLoFL6xvsozhT0sTyPmdEIoyDk9pWdJZYxFncPlod8rpVsH65w8omedSDZdLjWSE+FQ==}
@@ -2266,6 +2299,10 @@ packages:
       p-locate: 5.0.0
     dev: true
 
+  /lodash-es/4.17.21:
+    resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
+    dev: false
+
   /lodash.merge/4.6.2:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
     dev: true
@@ -3043,6 +3080,30 @@ packages:
   /wrappy/1.0.2:
     resolution: {integrity: sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=}
     dev: true
+
+  /xterm-addon-fit/0.5.0_xterm@4.18.0:
+    resolution: {integrity: sha512-DsS9fqhXHacEmsPxBJZvfj2la30Iz9xk+UKjhQgnYNkrUIN5CYLbw7WEfz117c7+S86S/tpHPfvNxJsF5/G8wQ==}
+    peerDependencies:
+      xterm: ^4.0.0
+    dependencies:
+      xterm: 4.18.0
+    dev: false
+
+  /xterm-addon-search/0.8.2_xterm@4.18.0:
+    resolution: {integrity: sha512-I1863mjn8P6uVrqm/X+btalVsqjAKLhnhpbP7SavAOpEkI1jJhbHU2UTp7NjeRtcKTks6UWk/ycgds5snDSejg==}
+    peerDependencies:
+      xterm: ^4.0.0
+    dependencies:
+      xterm: 4.18.0
+    dev: false
+
+  /xterm-theme/1.1.0:
+    resolution: {integrity: sha512-n2GocBEbqcz4vEl4OYkU93hEVia8GWdnqchiz/0nQ/olRUyhulGf4wfha23x/D2m0imWaIavRZtt8c6kWZXdsA==}
+    dev: false
+
+  /xterm/4.18.0:
+    resolution: {integrity: sha512-JQoc1S0dti6SQfI0bK1AZvGnAxH4MVw45ZPFSO6FHTInAiau3Ix77fSxNx3mX4eh9OL4AYa8+4C8f5UvnSfppQ==}
+    dev: false
 
   /yallist/4.0.0:
     resolution: {integrity: sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==}
