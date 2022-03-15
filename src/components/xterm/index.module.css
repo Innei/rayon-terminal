@@ -1,4 +1,6 @@
 .xterm {
+  @apply h-full w-full;
+
   position: relative;
   user-select: none;
   -ms-user-select: none;
