@@ -8,11 +8,13 @@
 }
 
 .search-bar-wrapper {
-  @apply hidden transition-all shadow-sm shadow-light-300 dark:shadow-dark-600;
+  @apply absolute right-4 top-4 z-10 flex rounded-lg bg-gray-200 dark:bg-dark-100;
+  @apply hidden transition-all;
+  @apply text-dark-800 dark:text-light-300;
 }
 
 .search-bar-wrapper.focus {
-  @apply shadow-xl shadow-light-600 dark:shadow-dark-300;
+  @apply shadow shadow-dark-50 light:shadow-gray-300;
 }
 
 .search-bar-wrapper:global(.active) {
@@ -20,9 +22,9 @@
 }
 
 .bar {
-  @apply bg-gray-200 dark:bg-gray-600 rounded-lg;
-  @apply text-dark-800 dark:text-light-300;
-  @apply px-2 py-1 shadow-light-400 dark:shadow-dark-200 transition-all;
+  @apply rounded-lg bg-transparent;
+
+  @apply px-2 py-1 transition-all;
   @apply outline-none;
 }
 

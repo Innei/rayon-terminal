@@ -51,7 +51,6 @@ export const SearchBar: Component = () => {
   return (
     <div
       ref={$searchBarWrapperEl}
-      class="absolute right-4 top-4 z-10 flex bg-gray-200 dark:bg-gray-600 rounded-lg"
       classList={{
         [styles['search-bar-wrapper']]: true,
         active: isActive(),

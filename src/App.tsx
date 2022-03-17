@@ -22,7 +22,7 @@ const useDebug = () => {
     )
     // add bg
 
-    document.body.classList.add('bg-light', 'dark:bg-dark')
+    document.body.classList.add('bg-light-50', 'dark:bg-dark-300')
   })
 }
 
