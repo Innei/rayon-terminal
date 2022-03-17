@@ -5,3 +5,5 @@ export function base64ToUint8Array(s) {
 function charCodeAt(c) {
   return c.charCodeAt(0)
 }
+
+export const isInWebkitView = typeof window.webkit !== 'undefined'

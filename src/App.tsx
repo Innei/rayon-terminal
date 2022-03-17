@@ -3,10 +3,11 @@ import 'xterm/css/xterm.css'
 import { XTerm } from './components/xterm'
 import { SearchBar } from './components/xterm/search-bar'
 import { terminal } from './core/terminal'
+import { isInWebkitView } from './utils'
 
 const useDebug = () => {
   onMount(() => {
-    if (typeof window.webkit !== 'undefined') {
+    if (isInWebkitView) {
       return
     }
     terminal.write('\x1b[31mHello world\x1b[0m\n')

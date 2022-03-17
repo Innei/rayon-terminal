@@ -2,7 +2,7 @@ import { Terminal } from 'xterm'
 import { FitAddon } from 'xterm-addon-fit'
 import { SearchAddon } from 'xterm-addon-search'
 import { ITheme } from '../types/theme'
-import { base64ToUint8Array } from '../utils'
+import { base64ToUint8Array, isInWebkitView } from '../utils'
 import { changeDarkTheme } from './chanage-theme'
 import { getTheme, storageTheme } from './storage'
 import { registerOnWindow } from './webkit-window'
@@ -21,7 +21,7 @@ export const terminal = new Terminal({
   theme: {
     background: 'transparent',
   },
-  rendererType: 'dom',
+  // rendererType: 'dom',
   fontFamily: storagesTheme?.fontFamily || 'monospace',
   fontSize: storagesTheme?.fontSize || 16,
 })
@@ -36,7 +36,9 @@ terminal.onTitleChange((title) => {
 })
 terminal.onData((data) => {
   const message = { magic: 'data', msg: data }
-
+  if (!isInWebkitView) {
+    terminal.write(data)
+  }
   window.webkit?.messageHandlers.callbackHandler.postMessage(message)
 })
 
