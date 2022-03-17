@@ -1,6 +1,8 @@
 import { Component, createEffect, createSignal, onMount } from 'solid-js'
 import { searchAddon } from '../../core/terminal'
 import styles from './index.module.css'
+// @ts-ignore
+import FormatLetterCaseupperIcon from '~icons/mdi/format-letter-case-upper'
 
 export const SearchBar: Component = () => {
   let $searchBarWrapperEl: HTMLDivElement
@@ -99,7 +101,7 @@ export const SearchBar: Component = () => {
             $searchBarInputEl.focus()
           }}
         >
-          <i class="i-mdi-format-letter-case-upper" />
+          <FormatLetterCaseupperIcon />
         </span>
       </div>
     </div>

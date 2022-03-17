@@ -1,25 +1,26 @@
-import Mdi from '@iconify-json/mdi'
-import presetIcons from '@unocss/preset-icons'
-import presetWind from '@unocss/preset-wind'
-import transformerDirective from '@unocss/transformer-directives'
-import { presetAttributify, presetUno } from 'unocss'
-import Unocss from 'unocss/vite'
 import { defineConfig } from 'vite'
 import solidPlugin from 'vite-plugin-solid'
+import Icons from 'unplugin-icons/vite'
+import WindiCSS from 'vite-plugin-windicss'
+
+import IconsResolver from 'unplugin-icons/resolver'
+import AutoImport from 'unplugin-auto-import/vite'
+
 export default defineConfig({
   base: './',
   plugins: [
-    solidPlugin(),
-    Unocss({
-      transformers: [transformerDirective()],
-      presets: [
-        presetWind({ dark: 'media' }),
-        presetAttributify({}),
-        presetUno(),
-        presetIcons({
-          collections: { mdi: Mdi.icons },
+    AutoImport({
+      resolvers: [
+        IconsResolver({
+          prefix: 'Icon',
+          extension: 'jsx',
         }),
       ],
+    }),
+    solidPlugin(),
+    WindiCSS(),
+    Icons({
+      compiler: 'solid',
     }),
   ],
   build: {
