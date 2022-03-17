@@ -6,7 +6,7 @@ specifiers:
   '@innei-util/eslint-config-ts': 0.5.0
   '@innei-util/prettier': 0.4.1
   '@types/lodash-es': 4.17.6
-  '@unocss/preset-icons': 0.28.1
+  '@unocss/preset-icons': 0.29.0
   '@unocss/preset-wind': 0.28.1
   '@unocss/reset': 0.28.1
   '@unocss/transformer-directives': 0.28.1
@@ -38,7 +38,7 @@ devDependencies:
   '@innei-util/eslint-config-react-ts': 0.2.0_typescript@4.6.2
   '@innei-util/eslint-config-ts': 0.5.0_typescript@4.6.2
   '@innei-util/prettier': 0.4.1
-  '@unocss/preset-icons': 0.28.1
+  '@unocss/preset-icons': 0.29.0
   '@unocss/preset-wind': 0.28.1
   '@unocss/transformer-directives': 0.28.1
   autoprefixer: 10.4.2_postcss@8.4.8
@@ -768,6 +768,10 @@ packages:
     resolution: {integrity: sha512-gzONvEKhIXOf6Xj3t+EKmsXZ7ONXCNiJB5+GqSxp6yZ7R33s1N80Q9yAW5mYYpeic3gxJ9HaGJnindKZg0QHzg==}
     dev: true
 
+  /@unocss/core/0.29.0:
+    resolution: {integrity: sha512-qJBs1qE9nyjuL/QY6cF9VMEjiMNrnwxnwJY9EvAwarn68RfzNuEQYFeolMi0sbW6LIIB2rv9/QRdxRTcKYF/dg==}
+    dev: true
+
   /@unocss/inspector/0.28.1:
     resolution: {integrity: sha512-WxZQGYXkukRbIyuvAZDT7bmZFjjz6y9db07W5aKLOPRW99pu/MSyqj6KxaW5UIywtHEw2rAqzdJ9zWsCN9I2vg==}
     dependencies:
@@ -786,6 +790,16 @@ packages:
     dependencies:
       '@iconify/utils': 1.0.24
       '@unocss/core': 0.28.1
+      local-pkg: 0.4.1
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  /@unocss/preset-icons/0.29.0:
+    resolution: {integrity: sha512-y/8XaTLKpng7uHhkQ26rUSroyAAI+QlbEudancze6pHup4vsAL/RHw4GTH6svBtxemLte1Lfl6LhQhlIyIdYYw==}
+    dependencies:
+      '@iconify/utils': 1.0.24
+      '@unocss/core': 0.29.0
       local-pkg: 0.4.1
     transitivePeerDependencies:
       - supports-color
