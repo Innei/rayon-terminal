@@ -1,12 +1,11 @@
 import { Terminal } from 'xterm'
 import { FitAddon } from 'xterm-addon-fit'
 import { SearchAddon } from 'xterm-addon-search'
-import { ITheme } from '../types/theme'
 import { base64ToUint8Array, isInWebkitView } from '../utils'
 import { changeDarkTheme } from './chanage-theme'
-import { getTheme, storageTheme } from './storage'
+import { getTheme } from './storage'
 import { registerOnWindow } from './webkit-window'
-
+import { version } from '../../package.json'
 export const fitAddon = new FitAddon()
 export const searchAddon = new SearchAddon()
 
@@ -14,75 +13,57 @@ Terminal.prototype.writeBase64 = function (this: Terminal, base64: string) {
   this.write(base64ToUint8Array(base64))
 }
 
-const storagesTheme = getTheme()
+export const terminal: Terminal = (() => {
+  const storagesTheme = getTheme()
 
-export const terminal = new Terminal({
-  allowTransparency: true,
-  theme: {
-    background: 'transparent',
-  },
-  // rendererType: 'dom',
-  fontFamily: storagesTheme?.fontFamily || 'monospace',
-  fontSize: storagesTheme?.fontSize || 16,
-})
-
-terminal.loadAddon(fitAddon)
-terminal.loadAddon(searchAddon)
-
-terminal.onTitleChange((title) => {
-  const message = { magic: 'title', msg: title }
-
-  window.webkit?.messageHandlers.callbackHandler.postMessage(message)
-})
-terminal.onData((data) => {
-  const message = { magic: 'data', msg: data }
-  if (!isInWebkitView) {
-    terminal.write(data)
-  }
-  window.webkit?.messageHandlers.callbackHandler.postMessage(message)
-})
-
-changeDarkTheme(
-  terminal,
-  window.matchMedia('(prefers-color-scheme: dark)').matches,
-)
-
-window
-  .matchMedia('(prefers-color-scheme: dark)')
-  .addEventListener('change', (ev) => {
-    if (ev.matches) {
-      changeDarkTheme(terminal, true)
-    } else {
-      changeDarkTheme(terminal, false)
-    }
+  const terminal = new Terminal({
+    allowTransparency: true,
+    theme: {
+      background: 'transparent',
+    },
+    // rendererType: 'dom',
+    fontFamily: storagesTheme?.fontFamily || 'monospace',
+    fontSize: storagesTheme?.fontSize || 16,
   })
 
-registerOnWindow()
+  terminal.loadAddon(fitAddon)
+  terminal.loadAddon(searchAddon)
 
-let memoStyles: HTMLStyleElement | null = null
+  terminal.onTitleChange((title) => {
+    const message = { magic: 'title', msg: title }
 
-window.setTheme = (theme: ITheme) => {
-  const styles = document.createElement('style')
+    window.webkit?.messageHandlers.callbackHandler.postMessage(message)
+  })
+  terminal.onData((data) => {
+    const message = { magic: 'data', msg: data }
+    if (!isInWebkitView) {
+      terminal.write(data)
+    }
+    window.webkit?.messageHandlers.callbackHandler.postMessage(message)
+  })
 
-  const { fontFamily, fontSize, ...rest } = theme
-  styles.innerHTML = `
-  .xterm-rows {
-    
-  }`
+  changeDarkTheme(
+    terminal,
+    window.matchMedia('(prefers-color-scheme: dark)').matches,
+  )
 
-  if (fontFamily) {
-    terminal.options.fontFamily = fontFamily
-  }
-  if (fontSize) {
-    terminal.options.fontSize = fontSize
-  }
+  window
+    .matchMedia('(prefers-color-scheme: dark)')
+    .addEventListener('change', (ev) => {
+      if (ev.matches) {
+        changeDarkTheme(terminal, true)
+      } else {
+        changeDarkTheme(terminal, false)
+      }
+    })
 
-  document.head.appendChild(styles)
+  registerOnWindow(terminal)
 
-  if (memoStyles) {
-    memoStyles.remove()
-  }
-  memoStyles = styles
+  console.log(
+    `%c Rayon Terminal v${version} %c https://innei.ren `,
+    'color: #fff; margin: 1em 0; padding: 5px 0; background: #2ab;',
+    'margin: 1em 0; padding: 5px 0; background: #efefef;',
+  )
 
-  storageTheme(theme)
-}
+  return terminal
+})()
