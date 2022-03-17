@@ -7,7 +7,7 @@ specifiers:
   '@innei-util/prettier': 0.4.1
   '@types/lodash-es': 4.17.6
   '@unocss/preset-icons': 0.28.1
-  '@unocss/preset-wind': 0.28.1
+  '@unocss/preset-wind': 0.29.0
   '@unocss/reset': 0.28.1
   '@unocss/transformer-directives': 0.28.1
   autoprefixer: ^10.4.2
@@ -39,7 +39,7 @@ devDependencies:
   '@innei-util/eslint-config-ts': 0.5.0_typescript@4.6.2
   '@innei-util/prettier': 0.4.1
   '@unocss/preset-icons': 0.28.1
-  '@unocss/preset-wind': 0.28.1
+  '@unocss/preset-wind': 0.29.0
   '@unocss/transformer-directives': 0.28.1
   autoprefixer: 10.4.2_postcss@8.4.8
   postcss: 8.4.8
@@ -768,6 +768,10 @@ packages:
     resolution: {integrity: sha512-gzONvEKhIXOf6Xj3t+EKmsXZ7ONXCNiJB5+GqSxp6yZ7R33s1N80Q9yAW5mYYpeic3gxJ9HaGJnindKZg0QHzg==}
     dev: true
 
+  /@unocss/core/0.29.0:
+    resolution: {integrity: sha512-qJBs1qE9nyjuL/QY6cF9VMEjiMNrnwxnwJY9EvAwarn68RfzNuEQYFeolMi0sbW6LIIB2rv9/QRdxRTcKYF/dg==}
+    dev: true
+
   /@unocss/inspector/0.28.1:
     resolution: {integrity: sha512-WxZQGYXkukRbIyuvAZDT7bmZFjjz6y9db07W5aKLOPRW99pu/MSyqj6KxaW5UIywtHEw2rAqzdJ9zWsCN9I2vg==}
     dependencies:
@@ -795,6 +799,12 @@ packages:
     resolution: {integrity: sha512-nASKKknmYaHNeGbOxkBwhD9iD1AJjhy6emBKsM2v0wYumqRx4R3udlomlye5B16MIfr2mlT+rLFJNuS7cCFgHw==}
     dependencies:
       '@unocss/core': 0.28.1
+    dev: true
+
+  /@unocss/preset-mini/0.29.0:
+    resolution: {integrity: sha512-dZnkE3WJWBLknikUc7idDLIMsgoS6YwoGZdEoKDrQgwmc68pWxXIg4Hook937LJi+waDxo9g+EEJNKDnuXxCJQ==}
+    dependencies:
+      '@unocss/core': 0.29.0
     dev: true
 
   /@unocss/preset-typography/0.28.1:
@@ -825,6 +835,13 @@ packages:
     dependencies:
       '@unocss/core': 0.28.1
       '@unocss/preset-mini': 0.28.1
+    dev: true
+
+  /@unocss/preset-wind/0.29.0:
+    resolution: {integrity: sha512-Nx0rhmAHD5/zVUl8KcdeYrCoZ2JQzhmkqUDooN89Eqa0azHdmGDvvEIl4C/FNhRH5SyBg/ogKqFwgKjCn0c3Jg==}
+    dependencies:
+      '@unocss/core': 0.29.0
+      '@unocss/preset-mini': 0.29.0
     dev: true
 
   /@unocss/reset/0.28.1:
