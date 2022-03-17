@@ -1,6 +1,12 @@
 declare global {
   interface Window {
-    webkit?: Record<string, any>
+    webkit?: {
+      messageHandlers: {
+        callbackHandler: {
+          postMessage(message: any): void
+        }
+      }
+    }
     fit: () => void
     [key: string]: any
   }
