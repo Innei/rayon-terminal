@@ -1,7 +1,7 @@
 import { createStore } from 'solid-js/store'
 class FeatureManager {
   private featureStore = createStore({
-    searchBar: [false, {} as { a: string }] as const,
+    searchBar: [false, {}] as const,
   })
   constructor() {}
 
