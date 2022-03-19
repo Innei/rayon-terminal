@@ -1,8 +1,16 @@
-import { Component, createEffect, createSignal, onMount } from 'solid-js'
-import { searchAddon } from '../../core/terminal'
-import styles from './index.module.css'
+import {
+  Component,
+  createComputed,
+  createEffect,
+  createSignal,
+  onCleanup,
+  onMount,
+} from 'solid-js'
 // @ts-ignore
 import FormatLetterCaseupperIcon from '~icons/mdi/format-letter-case-upper'
+import { featureManager } from '../../core/feature-manager'
+import { searchAddon } from '../../core/terminal'
+import styles from './index.module.css'
 
 export const SearchBar: Component = () => {
   let $searchBarWrapperEl: HTMLDivElement
@@ -15,9 +23,19 @@ export const SearchBar: Component = () => {
   const [keywold, setKeywold] = createSignal('')
 
   onMount(() => {
+    if (!featureManager.isFeatureEnabled('searchBar')) {
+      return
+    }
     const documentElement = window.document.documentElement
 
-    documentElement.onkeydown = (e) => {
+    documentElement.onkeydown = bindingSearchHotkey()
+  })
+
+  function bindingSearchHotkey(): (
+    this: GlobalEventHandlers,
+    ev: KeyboardEvent,
+  ) => any {
+    return (e) => {
       if ((e.metaKey || e.ctrlKey) && e.key === 'f') {
         setIsActive(true)
         requestAnimationFrame(() => {
@@ -33,6 +51,22 @@ export const SearchBar: Component = () => {
           setIsActive(false)
         }
       }
+    }
+  }
+
+  onCleanup(() => {
+    document.documentElement.onkeydown = null
+  })
+
+  createComputed(() => {
+    const isEnable = featureManager.isFeatureEnabled('searchBar')
+
+    if (!isEnable) {
+      setIsActive(false)
+      setIsFocus(false)
+      document.documentElement.onkeydown = null
+    } else {
+      document.documentElement.onkeydown = bindingSearchHotkey()
     }
   })
 

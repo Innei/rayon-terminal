@@ -9,6 +9,12 @@ import { version } from '../../package.json'
 export const fitAddon = new FitAddon()
 export const searchAddon = new SearchAddon()
 
+declare module 'xterm' {
+  export interface Terminal {
+    writeBase64(str: string): void
+  }
+}
+
 Terminal.prototype.writeBase64 = function (this: Terminal, base64: string) {
   this.write(base64ToUint8Array(base64))
 }

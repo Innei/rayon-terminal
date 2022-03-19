@@ -23,6 +23,10 @@ export default defineConfig({
       compiler: 'solid',
     }),
   ],
+  define: {
+    // @ts-ignore
+    __DEV__: process.env.NODE_ENV === 'development',
+  },
   build: {
     target: 'esnext',
     polyfillDynamicImport: false,

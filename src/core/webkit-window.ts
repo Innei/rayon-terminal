@@ -1,5 +1,6 @@
 import { Terminal } from 'xterm'
 import { ITheme } from '../types/theme'
+import { featureManager } from './feature-manager'
 import { storageTheme } from './storage'
 import { fitAddon, terminal } from './terminal'
 
@@ -42,5 +43,21 @@ export function registerOnWindow(terminal: Terminal) {
     memoStyles = styles
 
     storageTheme(theme)
+  }
+
+  window.manager = featureManager
+}
+
+declare global {
+  interface Window {
+    manager: typeof featureManager
+    webkit?: {
+      messageHandlers: {
+        callbackHandler: {
+          postMessage(message: any): void
+        }
+      }
+    }
+    fit: () => void
   }
 }
