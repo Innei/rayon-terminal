@@ -27,7 +27,7 @@ export const terminal: Terminal = (() => {
     theme: {
       background: 'transparent',
     },
-    // rendererType: 'dom',
+    rendererType: 'dom',
     fontFamily: storagesTheme?.fontFamily || 'monospace',
     fontSize: storagesTheme?.fontSize || 16,
   })
