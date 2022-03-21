@@ -43,6 +43,7 @@ export function registerOnWindow(terminal: Terminal) {
     memoStyles = styles
 
     storageTheme(theme)
+    terminal.refresh(0, terminal.rows - 1)
   }
 
   window.manager = featureManager
