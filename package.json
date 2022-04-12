@@ -10,7 +10,7 @@
   "license": "MIT",
   "devDependencies": {
     "@iconify-json/mdi": "1.1.1",
-    "@innei-util/eslint-config-react-ts": "0.2.0",
+    "@innei-util/eslint-config-react-ts": "0.8.2",
     "@innei-util/eslint-config-ts": "0.5.0",
     "@innei-util/prettier": "0.4.1",
     "autoprefixer": "^10.4.2",
