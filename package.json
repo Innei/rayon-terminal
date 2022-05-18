@@ -21,7 +21,7 @@
     "vite": "^2.8.6",
     "vite-plugin-solid": "^2.2.6",
     "vite-plugin-windicss": "1.8.3",
-    "windicss": "3.5.1"
+    "windicss": "3.5.4"
   },
   "dependencies": {
     "@types/lodash-es": "4.17.6",
