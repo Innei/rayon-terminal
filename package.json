@@ -25,7 +25,7 @@
   },
   "dependencies": {
     "@types/lodash-es": "4.17.6",
-    "@unocss/reset": "0.44.1",
+    "@unocss/reset": "0.45.1",
     "lodash-es": "4.17.21",
     "solid-js": "^1.4.7",
     "xterm": "4.19.0",
