@@ -1,11 +1,13 @@
 import { Terminal } from 'xterm'
 import { FitAddon } from 'xterm-addon-fit'
 import { SearchAddon } from 'xterm-addon-search'
+
+import { version } from '../../package.json'
 import { base64ToUint8Array, isInWebkitView } from '../utils'
 import { changeDarkTheme } from './chanage-theme'
 import { getTheme } from './storage'
 import { registerOnWindow } from './webkit-window'
-import { version } from '../../package.json'
+
 export const fitAddon = new FitAddon()
 export const searchAddon = new SearchAddon()
 
@@ -27,7 +29,7 @@ export const terminal: Terminal = (() => {
     theme: {
       background: 'transparent',
     },
-    rendererType: 'dom',
+
     fontFamily: storagesTheme?.fontFamily || 'monospace',
     fontSize: storagesTheme?.fontSize || 16,
   })

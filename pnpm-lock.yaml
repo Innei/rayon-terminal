@@ -19,6 +19,7 @@ specifiers:
   vite-plugin-windicss: 1.8.8
   windicss: 3.5.6
   xterm: 5.0.0
+  xterm-addon-canvas: 0.2.0
   xterm-addon-fit: 0.6.0
   xterm-addon-search: 0.10.0
   xterm-theme: 1.1.0
@@ -29,6 +30,7 @@ dependencies:
   lodash-es: 4.17.21
   solid-js: 1.5.5
   xterm: 5.0.0
+  xterm-addon-canvas: 0.2.0_xterm@5.0.0
   xterm-addon-fit: 0.6.0_xterm@5.0.0
   xterm-addon-search: 0.10.0_xterm@5.0.0
   xterm-theme: 1.1.0
@@ -2975,6 +2977,14 @@ packages:
   /wrappy/1.0.2:
     resolution: {integrity: sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==}
     dev: true
+
+  /xterm-addon-canvas/0.2.0_xterm@5.0.0:
+    resolution: {integrity: sha512-b4tMT05US9Rlqv6R0XZTHsfq8MRKzwxITwpvckuod/l4lokcCokHPbgpYAytOgrzqkzWjYI+Ol8en6cMGf8ncg==}
+    peerDependencies:
+      xterm: ^5.0.0
+    dependencies:
+      xterm: 5.0.0
+    dev: false
 
   /xterm-addon-fit/0.6.0_xterm@5.0.0:
     resolution: {integrity: sha512-9/7A+1KEjkFam0yxTaHfuk9LEvvTSBi0PZmEkzJqgafXPEXL9pCMAVV7rB09sX6ATRDXAdBpQhZkhKj7CGvYeg==}

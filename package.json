@@ -29,6 +29,7 @@
     "lodash-es": "4.17.21",
     "solid-js": "^1.5.5",
     "xterm": "5.0.0",
+    "xterm-addon-canvas": "0.2.0",
     "xterm-addon-fit": "0.6.0",
     "xterm-addon-search": "0.10.0",
     "xterm-theme": "1.1.0"
