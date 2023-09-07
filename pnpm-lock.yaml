@@ -18,17 +18,17 @@ dependencies:
     specifier: ^1.5.5
     version: 1.5.5
   xterm:
-    specifier: 5.2.1
-    version: 5.2.1
+    specifier: 5.3.0
+    version: 5.3.0
   xterm-addon-canvas:
-    specifier: 0.4.0
-    version: 0.4.0(xterm@5.2.1)
+    specifier: 0.5.0
+    version: 0.5.0(xterm@5.3.0)
   xterm-addon-fit:
-    specifier: 0.7.0
-    version: 0.7.0(xterm@5.2.1)
+    specifier: 0.8.0
+    version: 0.8.0(xterm@5.3.0)
   xterm-addon-search:
-    specifier: 0.12.0
-    version: 0.12.0(xterm@5.2.1)
+    specifier: 0.13.0
+    version: 0.13.0(xterm@5.3.0)
   xterm-theme:
     specifier: 1.1.0
     version: 1.1.0
@@ -3024,36 +3024,36 @@ packages:
     resolution: {integrity: sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==}
     dev: true
 
-  /xterm-addon-canvas@0.4.0(xterm@5.2.1):
-    resolution: {integrity: sha512-iTC8CdjX9+hGX7jiEuiDMXzHsY/FKJdVnbjep5xjRXNu7RKOk15xuecIkJ7HZORqMVPpr4DGS3jyd9XUoBuxqw==}
+  /xterm-addon-canvas@0.5.0(xterm@5.3.0):
+    resolution: {integrity: sha512-QOo/eZCMrCleAgMimfdbaZCgmQRWOml63Ued6RwQ+UTPvQj3Av9QKx3xksmyYrDGRO/AVRXa9oNuzlYvLdmoLQ==}
     peerDependencies:
       xterm: ^5.0.0
     dependencies:
-      xterm: 5.2.1
+      xterm: 5.3.0
     dev: false
 
-  /xterm-addon-fit@0.7.0(xterm@5.2.1):
-    resolution: {integrity: sha512-tQgHGoHqRTgeROPnvmtEJywLKoC/V9eNs4bLLz7iyJr1aW/QFzRwfd3MGiJ6odJd9xEfxcW36/xRU47JkD5NKQ==}
+  /xterm-addon-fit@0.8.0(xterm@5.3.0):
+    resolution: {integrity: sha512-yj3Np7XlvxxhYF/EJ7p3KHaMt6OdwQ+HDu573Vx1lRXsVxOcnVJs51RgjZOouIZOczTsskaS+CpXspK81/DLqw==}
     peerDependencies:
       xterm: ^5.0.0
     dependencies:
-      xterm: 5.2.1
+      xterm: 5.3.0
     dev: false
 
-  /xterm-addon-search@0.12.0(xterm@5.2.1):
-    resolution: {integrity: sha512-hXAuO7Ts2+Jf9K8mZrUx8IFd7c/Flgks/jyqA1L4reymyfmXtcsd+WDLel8R9Tgy2CLyKABVBP09/Ua/FmXcvg==}
+  /xterm-addon-search@0.13.0(xterm@5.3.0):
+    resolution: {integrity: sha512-sDUwG4CnqxUjSEFh676DlS3gsh3XYCzAvBPSvJ5OPgF3MRL3iHLPfsb06doRicLC2xXNpeG2cWk8x1qpESWJMA==}
     peerDependencies:
       xterm: ^5.0.0
     dependencies:
-      xterm: 5.2.1
+      xterm: 5.3.0
     dev: false
 
   /xterm-theme@1.1.0:
     resolution: {integrity: sha512-n2GocBEbqcz4vEl4OYkU93hEVia8GWdnqchiz/0nQ/olRUyhulGf4wfha23x/D2m0imWaIavRZtt8c6kWZXdsA==}
     dev: false
 
-  /xterm@5.2.1:
-    resolution: {integrity: sha512-cs5Y1fFevgcdoh2hJROMVIWwoBHD80P1fIP79gopLHJIE4kTzzblanoivxTiQ4+92YM9IxS36H1q0MxIJXQBcA==}
+  /xterm@5.3.0:
+    resolution: {integrity: sha512-8QqjlekLUFTrU6x7xck1MsPzPA571K5zNqWm0M0oroYEWVOptZ0+ubQSkQ3uxIEhcIHRujJy6emDWX4A7qyFzg==}
     dev: false
 
   /yallist@4.0.0:
