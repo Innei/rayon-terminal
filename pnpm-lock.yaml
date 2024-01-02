@@ -35,8 +35,8 @@ dependencies:
 
 devDependencies:
   '@iconify-json/mdi':
-    specifier: 1.1.33
-    version: 1.1.33
+    specifier: 1.1.64
+    version: 1.1.64
   '@innei-util/eslint-config-react-ts':
     specifier: 0.8.2
     version: 0.8.2(eslint@8.19.0)(typescript@5.0.4)
@@ -647,8 +647,8 @@ packages:
       - supports-color
     dev: true
 
-  /@iconify-json/mdi@1.1.33:
-    resolution: {integrity: sha512-P8zIjwYvQ6SsmHc02O4oNV3jsqbL4bXcfKSt9MfCPMBvF9CLzz6QHMzQgt/Okgsb8wfhkfSQeREp+dSxV9pLRA==}
+  /@iconify-json/mdi@1.1.64:
+    resolution: {integrity: sha512-zGeo5TjhNFAY6FmSDBLAzDO811t77r6v/mDi7CAL9w5eXqKez6bIjk8R9AL/RHIeq44ALP4Ozr4lMqFTkHr7ug==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: true
