@@ -17,7 +17,7 @@
     "postcss": "^8.4.16",
     "typescript": "^5.0.0",
     "unplugin-auto-import": "0.11.2",
-    "unplugin-icons": "0.14.9",
+    "unplugin-icons": "0.18.5",
     "vite": "^4.2.3",
     "vite-plugin-solid": "^2.3.2",
     "vite-plugin-windicss": "1.8.8",
