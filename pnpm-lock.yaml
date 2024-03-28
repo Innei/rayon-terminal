@@ -9,8 +9,8 @@ dependencies:
     specifier: 4.17.7
     version: 4.17.7
   '@unocss/reset':
-    specifier: 0.55.3
-    version: 0.55.3
+    specifier: 0.58.8
+    version: 0.58.8
   lodash-es:
     specifier: 4.17.21
     version: 4.17.21
@@ -977,8 +977,8 @@ packages:
       eslint-visitor-keys: 3.3.0
     dev: true
 
-  /@unocss/reset@0.55.3:
-    resolution: {integrity: sha512-zl3mogr3z6huA5CHZggOljoYFQDTidEw5T6pGPahfHB5qS9DH0UGozg5T9UtYWiidHL3xqyv6ZU27nyIMnlnhg==}
+  /@unocss/reset@0.58.8:
+    resolution: {integrity: sha512-6Cz92Ryer7QpFhxnOwyauwVJfDGhCNYvLHGqW8ScIicFEPK9AUXYys/zBRCIYO2489/kckZ5EG8a3NImS5h+9w==}
     dev: false
 
   /@windicss/config@1.8.8:
